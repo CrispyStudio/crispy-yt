@@ -24,22 +24,27 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
-            margin-top: 20px;
+            gap: 30px;
+            margin-top: 30px;
         }
         .profile-item {
-            margin-bottom: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            width: 320px;
         }
         .profile-item p {
             font-weight: bold;
-            margin-bottom: 5px;
+            font-size: 16px;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 15px;
         }
         img {
-            max-width: 80%;
-            width: 300px; /* 이미지 너비 조절 */
+            max-width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -54,25 +59,13 @@
 
     <p><strong>채널 프로필의 역사:</strong></p>
     
-    <!-- 이미지를 보여주는 영역 -->
     <div class="profile-container">
+        <!-- 프로필 1: 빠삭 (치킨 다리 형태) -->
         <div class="profile-item">
             <p>빠삭한치킨프로필 1</p>
-            <img src="profile1.jpg" alt="빠삭한치킨프로필 1">
+            <img src="data:image/png;base64,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" alt="빠삭한치킨프로필 1">
         </div>
+
+        <!-- 프로필 2: 크리스피 (치킨 다리 형태) -->
         <div class="profile-item">
             <p>크리스피치킨프로필 2</p>
-            <img src="profile2.jpg" alt="크리스피치킨프로필 2">
-        </div>
-        <div class="profile-item">
-            <p>전크리스피프로필 3</p>
-            <img src="profile3.jpg" alt="전크리스피프로필 3">
-        </div>
-        <div class="profile-item">
-            <p>현크리스피프로필 4</p>
-            <img src="profile4.jpg" alt="현크리스피프로필 4">
-        </div>
-    </div>
-
-</body>
-</html>
