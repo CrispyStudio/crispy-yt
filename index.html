@@ -20,25 +20,24 @@
             font-size: 18px;
             color: #555;
         }
-        .url-list {
-            list-style: none;
-            padding: 0;
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
             margin-top: 20px;
         }
-        .url-list li {
-            margin: 10px 0;
+        .profile-item {
+            margin-bottom: 20px;
         }
-        .url-list a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .url-list a:hover {
-            text-decoration: underline;
+        .profile-item p {
+            font-weight: bold;
+            margin-bottom: 5px;
         }
         img {
             max-width: 80%;
+            width: 300px; /* 이미지 너비 조절 */
             height: auto;
-            margin: 20px 0;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
@@ -47,7 +46,6 @@
 <body>
 
     <h1>크리스피유튜브 소개</h1>
-    
     <p>
         크리스피(crispy)는 영어로 바삭한이라는 형용사이며, 크리스피 채널의 채널명입니다.<br>
         처음에는 '빠삭한치킨'이라는 채널명으로 활동을 시작했습니다.<br>
@@ -55,11 +53,26 @@
     </p>
 
     <p><strong>채널 프로필의 역사:</strong></p>
-    <ul class="url-list">
-        <li><a href="https://crispystudio.github.io/crispy-yt/" target="_blank">빠삭한치킨프로필 1</a></li>
-        <li><a href="https://crispystudio.github.io/crispy-yt/" target="_blank">크리스피치킨프로필 2</a></li>
-        <li><a href="https://crispystudio.github.io/crispy-yt/" target="_blank">전크리스피프로필 3</a></li>
-        <li><a href="https://crispystudio.github.io/crispy-yt/" target="_blank">현크리스피프로필 4</a></li>
-    </ul>
+    
+    <!-- 이미지를 보여주는 영역 -->
+    <div class="profile-container">
+        <div class="profile-item">
+            <p>빠삭한치킨프로필 1</p>
+            <img src="profile1.jpg" alt="빠삭한치킨프로필 1">
+        </div>
+        <div class="profile-item">
+            <p>크리스피치킨프로필 2</p>
+            <img src="profile2.jpg" alt="크리스피치킨프로필 2">
+        </div>
+        <div class="profile-item">
+            <p>전크리스피프로필 3</p>
+            <img src="profile3.jpg" alt="전크리스피프로필 3">
+        </div>
+        <div class="profile-item">
+            <p>현크리스피프로필 4</p>
+            <img src="profile4.jpg" alt="현크리스피프로필 4">
+        </div>
+    </div>
 
 </body>
+</html>
